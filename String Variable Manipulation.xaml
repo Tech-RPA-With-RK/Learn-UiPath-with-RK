@@ -1,0 +1,419 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="String_Variable_Manipulation" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="848.8,5312" sap2010:WorkflowViewState.IdRef="String_Variable_Manipulation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="String_Variable_Manipulation" sap:VirtualizedContainerService.HintSize="540.8,5247.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="UpperCaseOriginalText" />
+      <Variable x:TypeArguments="x:String" Name="LowerCaseOriginalText" />
+      <Variable x:TypeArguments="x:String" Name="TextwithSpaces" />
+      <Variable x:TypeArguments="x:String" Name="SampleText" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="FruitList" />
+      <Variable x:TypeArguments="x:String" Name="FruitsStr" />
+      <Variable x:TypeArguments="x:String" Name="LongSampleText" />
+      <Variable x:TypeArguments="x:String" Name="HelloText" />
+      <Variable x:TypeArguments="s:String[]" Name="FruitArray" />
+      <Variable x:TypeArguments="x:String" Name="LowerText" />
+      <Variable x:TypeArguments="x:String" Name="NormalizeString" />
+      <Variable x:TypeArguments="x:String" Name="EmptyStr" />
+      <Variable x:TypeArguments="x:String" Name="WhiteSpaceString" />
+      <Variable x:TypeArguments="x:Int32" Name="NumberValue" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assigning all the input variables used in this xaml" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,555.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[UpperCaseOriginalText]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">HELLO WORLD</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[LowerCaseOriginalText]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">hello world</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[TextwithSpaces]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">Hello World </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[SampleText]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Hello World</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[FruitsStr]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">apple,banana,orange</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[LongSampleText]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Hello World, Welcome to the World</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[HelloText]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Hello</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="s:String[]">[FruitArray]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="s:String[]">[{"apple", "banana", "orange"}]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[LowerText]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">hello</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[NormalizeString]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Ångström</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[EmptyStr]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" Value="" />
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[WhiteSpaceString]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">     </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">[NumberValue]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">123</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - 123&#xA;Output - &quot;123&quot;" DisplayName="Write Line -  ToString" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_26" Text="[&quot;To String Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input &quot; + &quot;123&quot; + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + NumberValue.ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;HELLO WORLD&quot;&#xD;&#xA;Output - &quot;hello world&quot;" DisplayName="Write Line - To Lower" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Lower Case conversion&quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot;+ UpperCaseOriginalText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + UpperCaseOriginalText.ToLower()]" TextWriter="{x:Null}">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;hello world&quot;&#xA;Output - &quot;HELLO WORLD&quot;" DisplayName="Write Line - To Upper" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Upper Case conversion &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + LowerCaseOriginalText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + LowerCaseOriginalText.ToUpper()]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;Hello World &quot;&#xA;Output - &quot;Hello World&quot;" DisplayName="Write Line - Trim" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Trim Function&quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + TextwithSpaces + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + TextwithSpaces.Trim()]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;Hello World&quot;     (0,5)&#xA;Output - &quot;Hello&quot;" DisplayName="Write Line - Substring" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;SubString Function 0 to 5 index&quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + SampleText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + SampleText.SubString(0,5)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;Hello World&quot;     Contains - &quot;Hello&quot;&#xA;Output - True&#xD;&#xA;&#xD;&#xA;Input - &quot;Hello World&quot;     Contains - &quot;UiPath&quot;&#xA;Output - False" DisplayName="Write Line - Contains" sap:VirtualizedContainerService.HintSize="478.4,214.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[&quot;Contains Function 'Hello'&quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + SampleText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + SampleText.Contains(&quot;Hello&quot;).ToString+ &#xD;&#xA;Environment.NewLine +&#xD;&#xA;&quot;Contains Function 'UiPath'&quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + SampleText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + SampleText.Contains(&quot;UiPath&quot;).ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;Hello World&quot;     StartsWith - &quot;Hello&quot;&#xA;Output - True&#xA;&#xA;Input - &quot;Hello World&quot;     EndWith - &quot;World&quot;&#xA;Output - True" DisplayName="Write Line - Starts With &amp; Ends With" sap:VirtualizedContainerService.HintSize="478.4,214.4" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;StartWith Function 'Hello'&quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + SampleText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + SampleText.StartsWith(&quot;Hello&quot;).ToString+&#xD;&#xA;Environment.NewLine+&#xD;&#xA;&quot;EndsWith Function 'World'&quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + SampleText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + SampleText.EndsWith(&quot;World&quot;).ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;Hello World&quot;     Replace Value - UiPath&#xA;Output - &quot;Hello UiPath&quot;" DisplayName="Write Line - Replace" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;Replace Function (World replace to UiPath)&quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + SampleText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + SampleText.Replace(&quot;World&quot;,&quot;UiPath&quot;)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <Assign sap2010:Annotation.AnnotationText="Input - &quot;apple,banana,orange&quot;&#xA;Output - {&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;}" sap:VirtualizedContainerService.HintSize="478.4,157.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:List(x:String)">[FruitList]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:List(x:String)">[FruitsStr.Split(","c).ToList()]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;apple,banana,orange&quot;&#xA;Output - {&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;}" DisplayName="Write Line - Split" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;Replace Function (World replace to UiPath)&quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + FruitsStr + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + FruitList(0).ToString +&quot; &quot; + FruitList(1).ToString + &quot; &quot;+ FruitList(2).ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;Hello World&quot;     Word - World&#xA;Output - 6" DisplayName="Write Line - Indexof()" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[&quot;Index Function of World position &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + SampleText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + SampleText.IndexOf(&quot;World&quot;).ToString]" TextWriter="{x:Null}">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;Hello World, Welcome to the World&quot;     &#xD;&#xA;Index - World&#xA;Output - 28" DisplayName="Write Line - LastIndexof()" sap:VirtualizedContainerService.HintSize="478.4,182.4" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;Last Index Function of World position &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + LongSampleText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + LongSampleText.LastIndexOf(&quot;World&quot;).ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;Hello World&quot;     Index - 5; Length - 6&#xA;Output - &quot;Hello&quot;" DisplayName="Write Line - Remove" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;Remove Function of World position &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + SampleText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + SampleText.Remove(5,6).ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;Hello World&quot;     Index - 6; Word- Imaginary&#xA;Output - &quot;Hello Imaginary World&quot;" DisplayName="Write Line - Insert" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;Insert Function of Imaginary word &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + SampleText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + SampleText.Insert(6,&quot;Imaginary &quot;).ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;Hello&quot;     Length- 10; Character - *&#xA;Output - &quot;*****Hello&quot;" DisplayName="Write Line - Pad Left" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;Pad Left Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + HelloText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + HelloText.PadLeft(10,&quot;*&quot;c)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &quot;Hello&quot;     Length- 10; Character - *&#xA;Output - &quot;Hello*****&quot;" DisplayName="Write Line - Pad Right" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[&quot;Pad Right Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + HelloText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + HelloText.PadRight(10,&quot;*&quot;c)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - {&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;}&#xA;Output - &quot;apple, banana, orange&quot;" DisplayName="Write Line - Join" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="[&quot;Join Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + &quot;{&quot;&quot;apple&quot;&quot;,&quot;&quot;banana&quot;&quot;,&quot;&quot;orange&quot;&quot;}&quot; + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + String.Join(&quot;,&quot;,FruitArray)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - Hello, {0}! You have {1} new messages.&quot;, &quot;John&quot;, 5&#xA;Output - &quot;Hello, John! You have 5 new messages.&quot;" DisplayName="Write Line - Format" sap:VirtualizedContainerService.HintSize="478.4,182.4" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="[&quot;Join Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + &quot;Hello, {0}! You have {1} new messages.&quot;&quot;, &quot;&quot;John&quot;&quot;, &quot;&quot;5&quot;+ Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + String.Format(&quot;Hello, {0}! You have {1} new messages.&quot;, &quot;John&quot;, 5)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - Hello&#xA;Output - 5" DisplayName="Write Line - Length" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="[&quot;Length Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + HelloText+ Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + HelloText.Length.ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - Hello, World&#xA;Output - Hello World" DisplayName="Write Line - Concat" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="[&quot;String Concat Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + HelloText+ Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; +String.Concat(HelloText,&quot; &quot;, &quot;World&quot;)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - (&quot;apple&quot;, &quot;banana&quot;)&#xA;Output - -1" DisplayName="Write Line - Compare" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_19" Text="[&quot;String Compare Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input - &quot; + &quot;&quot;&quot;apple&quot;&quot;, &quot;&quot;banana&quot;&quot;&quot;+ Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; +String.Compare(&quot;apple&quot;,&quot;bannana&quot;).ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - Hello, hello&#xD;&#xA;Output - True" DisplayName="Write Line - Equals" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_20" Text="[&quot;String Equals Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input 1 - &quot; + HelloText + Environment.NewLine +&#xD;&#xA;&quot;Input 2 - &quot; + LowerText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + HelloText.Equals(LowerText, StringComparison.OrdinalIgnoreCase).ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - Ångström&#xA;Output - True" DisplayName="Write Line - Normalize" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_21" Text="[&quot;String Normalize Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input &quot; + NormalizeString + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + NormalizeString.Normalize()]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - Hello&#xA;Output - {&quot;H&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;}" DisplayName="Write Line - ToCharArray" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_22" Text="[&quot;ToCharArray Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input &quot; + HelloText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + HelloText.ToCharArray()]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - Hello&#xA;Output - -1814023202" DisplayName="Write Line - Get Hash Code" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_23" Text="[&quot;Get Hash Code Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input &quot; + HelloText + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + HelloText.GetHashCode().ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &#xA;Output - True" DisplayName="Write Line -  IsNullOrEmpty()" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteLine_24" Text="[&quot; Is Null Or Empty Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input &quot; + EmptyStr + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + String.IsNullOrEmpty(EmptyStr).ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="Input - &#xA;Output - True" DisplayName="Write Line -  IsNullOrWhiteSpace()" sap:VirtualizedContainerService.HintSize="478.4,157.6" sap2010:WorkflowViewState.IdRef="WriteLine_25" Text="[&quot;Is Null Or WhiteSpace Function &quot; + Environment.NewLine+&#xD;&#xA;&quot;Input &quot; + WhiteSpaceString + Environment.NewLine +&#xD;&#xA;&quot;Output - &quot; + String.IsNullOrWhiteSpace(WhiteSpaceString).ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+  </Sequence>
+</Activity>
