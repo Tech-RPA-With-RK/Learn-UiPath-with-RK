@@ -1,0 +1,423 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="List" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="848.8,1590.4" sap2010:WorkflowViewState.IdRef="List_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uasa="clr-namespace:UiPath.Activities.System.Arrays;assembly=UiPath.System.Activities" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:uascf="clr-namespace:UiPath.Activities.System.Collections.Filters;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>UiPath.Activities.System.Collections.Filters</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="List" sap:VirtualizedContainerService.HintSize="512,1525.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(x:Int32)" Name="MyNumbers" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="Colours" />
+      <Variable x:TypeArguments="x:Boolean" Name="ContainsRed" />
+      <Variable x:TypeArguments="x:Int32" Name="BlueIndex" />
+      <Variable x:TypeArguments="x:Int32" Name="ColurCount" />
+      <Variable x:TypeArguments="x:String" Name="G_Colour" />
+      <Variable x:TypeArguments="x:Int32" Name="G_ColourIndex" />
+      <Variable x:TypeArguments="x:Boolean" Name="E_Exist" />
+      <Variable x:TypeArguments="x:Boolean" Name="TrueForAllCondition" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Sequence - Initialize and Declare" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Assign - Initialize the List Variable" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="scg:List(x:Int32)">[MyNumbers]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="scg:List(x:Int32)">[New List(Of Int32)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - Initialize and Declare the Values" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="scg:List(x:Int32)">[MyNumbers]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="scg:List(x:Int32)">[New List(Of Int32) From {1,3,5,4,7,8}]</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Sequence>
+    <Sequence DisplayName="Sequence - List Manipulations with Basic actions" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Assign - Initialize and Declare the Values" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="scg:List(x:String)">[Colours]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String) From {"Red", "Green", "Blue"}]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - Check Red is present in the List" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Boolean">[ContainsRed]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Boolean">[Colours.Contains("Red")]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - Check Index of the Blue" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[BlueIndex]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[Colours.IndexOf("Blue")]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - Check total count of elements in List" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[ColurCount]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[Colours.Count]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - Find element that starts with G" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[G_Colour]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[Colours.Find(Function(x) x.StartsWith("G"))]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - Find index of element that starts with G" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[G_ColourIndex]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[Colours.FindIndex(Function(x) x.StartsWith("G"))]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - Find element that exist with e" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Boolean">[E_Exist]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Boolean">[Colours.Exists(Function(x) x.Contains("e"))]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - True for all condition" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_10">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Boolean">[TrueForAllCondition]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Boolean">[Colours.TrueForAll(Function(c) c.Length &gt; 2)]</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Sequence>
+    <Sequence DisplayName="Sequence - List Manipulations with Invoke Code" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Sorts the elements in the list in ascending order." Code="Colours.Sort()" DisplayName="Invoke Code - Sorts the color List" sap:VirtualizedContainerService.HintSize="387.2,100.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Colours">
+            <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="Colours" />
+          </InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Reverses the order of the elements in the list." Code="Colours.Reverse()" DisplayName="Invoke Code - Reverse the color List" sap:VirtualizedContainerService.HintSize="387.2,100.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Colours">[Colours]</InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Inserts an element into the list at a specified index." Code="Colours.Insert(1, &quot;Pink&quot;)" DisplayName="Invoke Code - Insert value in the color List" sap:VirtualizedContainerService.HintSize="387.2,100.8" sap2010:WorkflowViewState.IdRef="InvokeCode_5">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Colours">[Colours]</InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Removes the element at the specified index." Code="Colours.RemoveAt(1)" DisplayName="Invoke Code - Remove value in the color List using index" sap:VirtualizedContainerService.HintSize="387.2,100.8" sap2010:WorkflowViewState.IdRef="InvokeCode_6">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Colours">[Colours]</InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Removes the first occurrence of a specified item from the list." Code="Colours.Remove(&quot;Blue&quot;)" DisplayName="Invoke Code - Remove value in the list using value" sap:VirtualizedContainerService.HintSize="387.2,116.8" sap2010:WorkflowViewState.IdRef="InvokeCode_7">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Colours">[Colours]</InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Inserts a collection of elements into the list at a specified index." Code="Colours.InsertRange(2, New List(Of String) From {&quot;Teal&quot;, &quot;Magenta&quot;})" DisplayName="Invoke Code - Insert element in the color List" sap:VirtualizedContainerService.HintSize="387.2,116.8" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Colours">[Colours]</InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Removes all elements that match the conditions defined by a predicate." Code="Colours.RemoveAll(Function(c) c.StartsWith(&quot;R&quot;))" DisplayName="Invoke Code - Removes all elements in color List" sap:VirtualizedContainerService.HintSize="387.2,116.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Colours">[Colours]</InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Adds a collection of items to the end of the list." Code="Colours.AddRange(New List(Of String) From {&quot;Yellow&quot;, &quot;Orange&quot;})" DisplayName="Invoke Code - Add range of values in color List" sap:VirtualizedContainerService.HintSize="387.2,100.8" sap2010:WorkflowViewState.IdRef="InvokeCode_9">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Colours">[Colours]</InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Adds an item to the end of the list." Code="Colours.Add(&quot;Purple&quot;)" DisplayName="Invoke Code - Add value in color List" sap:VirtualizedContainerService.HintSize="387.2,100.8" sap2010:WorkflowViewState.IdRef="InvokeCode_10">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Colours">[Colours]</InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Removes all elements from the list." Code="Colours.Clear()" DisplayName="Invoke Code - Clear the List" sap:VirtualizedContainerService.HintSize="387.2,92" sap2010:WorkflowViewState.IdRef="InvokeCode_8">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Colours">[Colours]</InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+    </Sequence>
+    <Sequence DisplayName="Sequence - Built-in List Activities" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Int32" Name="Item_Index" />
+        <Variable x:TypeArguments="scg:IList(x:String)" Name="Car_Variety" />
+        <Variable x:TypeArguments="x:String" Name="First_Car_Value" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:CreateList x:TypeArguments="x:String" DisplayName="Create List - Create a Car List" sap:VirtualizedContainerService.HintSize="387.2,167.2" sap2010:WorkflowViewState.IdRef="CreateList`1_1" NewList="[Car_Variety]" />
+      <uasa:AppendItemToList x:TypeArguments="x:String" DisplayName="Append Item to List - Add Maruti to Car List" sap:VirtualizedContainerService.HintSize="387.2,167.2" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_1" ItemIndex="[Item_Index]" ItemToAppend="Maruti" List="[Car_Variety]" />
+      <uasa:ReadListItem x:TypeArguments="x:String" DisplayName="Read List Item - Storing the First value in a variable" sap:VirtualizedContainerService.HintSize="387.2,221.6" sap2010:WorkflowViewState.IdRef="ReadListItem`1_1" ItemIndex="0" List="[Car_Variety]" Value="[First_Car_Value]" />
+      <uasa:UpdateListItem x:TypeArguments="x:String" DisplayName="Update List Item - Update Maruti to Honda" sap:VirtualizedContainerService.HintSize="387.2,212.8" sap2010:WorkflowViewState.IdRef="UpdateListItem`1_1" ItemIndex="0" List="[Car_Variety]" Value="Honda">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uasa:UpdateListItem>
+    </Sequence>
+    <Sequence DisplayName="Sequence - Collection Activities" sap:VirtualizedContainerService.HintSize="449.6,1096" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="scg:List(x:String)" Name="Animal_Collection" />
+        <Variable x:TypeArguments="x:Int32" Name="IndexOfHorse" />
+        <Variable x:TypeArguments="x:Boolean" Name="IsHorseExist" />
+        <Variable x:TypeArguments="sd:DataTable" Name="Animal_DT" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uasc:BuildCollection x:TypeArguments="x:String" Items="{x:Null}" DisplayName="Build Collection - Creat a new collection" FirstItem="Mouse" sap:VirtualizedContainerService.HintSize="387.2,174.4" sap2010:WorkflowViewState.IdRef="BuildCollection`1_1" Result="[Animal_Collection]">
+        <uasc:BuildCollection.NextItems>
+          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+            <InArgument x:TypeArguments="x:String">Cat</InArgument>
+            <InArgument x:TypeArguments="x:String">Dog</InArgument>
+            <InArgument x:TypeArguments="x:String">Elephant</InArgument>
+          </scg:List>
+        </uasc:BuildCollection.NextItems>
+      </uasc:BuildCollection>
+      <uasc:AppendItemToCollection x:TypeArguments="x:String" Collection="[Animal_Collection]" DisplayName="Append Items to Collection - Add elements in the existing collection" sap:VirtualizedContainerService.HintSize="387.2,173.6" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_1" Result="[Animal_Collection]">
+        <uasc:AppendItemToCollection.Items>
+          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+            <InArgument x:TypeArguments="x:String">Horse</InArgument>
+            <InArgument x:TypeArguments="x:String">Zebra</InArgument>
+          </scg:List>
+        </uasc:AppendItemToCollection.Items>
+      </uasc:AppendItemToCollection>
+      <uasc:ExistsInCollection x:TypeArguments="x:String" Collection="[Animal_Collection]" DisplayName="Exists In Collection - Check Horse is present in Animal collection" Exists="[IsHorseExist]" sap:VirtualizedContainerService.HintSize="387.2,174.4" sap2010:WorkflowViewState.IdRef="ExistsInCollection`1_1" Index="[IndexOfHorse]" Item="Horse" />
+      <uasc:FilterCollection x:TypeArguments="x:String" Collection="[Animal_Collection]" DisplayName="Filter Collection - Filtereing value by checking e contains" FilterAction="RemoveMatchingElements" sap:VirtualizedContainerService.HintSize="387.2,225.6" sap2010:WorkflowViewState.IdRef="FilterCollection`1_1">
+        <uasc:FilterCollection.Filter>
+          <uascf:CollectionFilterSettings LogicalOperator="And">
+            <uascf:CollectionFilterSettings.Filters>
+              <scg:List x:TypeArguments="uascf:Filter" Capacity="4">
+                <uascf:Filter x:TypeArguments="x:String" Criteria="CurrentItem" Value="e">
+                  <uascf:Filter.Operator>
+                    <uascf:ContainsOperator />
+                  </uascf:Filter.Operator>
+                </uascf:Filter>
+              </scg:List>
+            </uascf:CollectionFilterSettings.Filters>
+          </uascf:CollectionFilterSettings>
+        </uasc:FilterCollection.Filter>
+      </uasc:FilterCollection>
+      <ui:CollectionToDataTable x:TypeArguments="x:String" Collection="[Animal_Collection]" DataTable="[Animal_DT]" DisplayName="Collection to DataTable" sap:VirtualizedContainerService.HintSize="387.2,122.4" sap2010:WorkflowViewState.IdRef="CollectionToDataTable`1_1" />
+      <uasc:RemoveFromCollection x:TypeArguments="x:String" Index="{x:Null}" Collection="[Animal_Collection]" DisplayName="Remove From Collection - Remove Dog" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_1" Item="Dog" RemoveAllElements="False" Result="[Animal_Collection]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uasc:RemoveFromCollection>
+      <uasc:RemoveFromCollection x:TypeArguments="x:String" Index="{x:Null}" Item="{x:Null}" Collection="[Animal_Collection]" DisplayName="Remove All from collection" sap:VirtualizedContainerService.HintSize="387.2,48" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_2" RemoveAllElements="True" Result="[Animal_Collection]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uasc:RemoveFromCollection>
+    </Sequence>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="End" />
+  </Sequence>
+</Activity>
